@@ -242,3 +242,34 @@ h1 { margin: 18px 0 16px; font-family: Georgia, "Times New Roman", serif; font-s
   .cv-entry, .cv-block, .contact-card, .project-card { break-inside: avoid; }
   a { color: #111; text-decoration: none; }
 }
+
+
+/* Profile portrait on the home page */
+.profile-photo-frame {
+  position: relative;
+  z-index: 1;
+  width: 148px;
+  aspect-ratio: 1;
+  margin: 0 auto 22px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+@media (max-width: 760px) {
+  .profile-photo-frame {
+    width: 136px;
+    margin-bottom: 19px;
+  }
+}
