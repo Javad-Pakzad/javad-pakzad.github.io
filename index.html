@@ -3,68 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic website of Javad Pakzad, with interests in numerical analysis, scientific computing, and machine learning for differential equations.">
+  <meta name="description" content="Academic website of Javad Pakzad, an Applied Mathematics master's student interested in numerical analysis, differential equations, and scientific computing.">
+  <meta name="theme-color" content="#132b45">
   <title>Javad Pakzad | Academic Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="site-name" href="index.html">Javad Pakzad</a>
-    <nav aria-label="Main navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="interests.html">Interests</a>
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">☾</button>
-    </nav>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Javad Pakzad, home">
+        <span class="brand-mark" aria-hidden="true">JP</span>
+        <span class="brand-text"><strong>Javad Pakzad</strong><span>ACADEMIC WEBSITE</span></span>
+      </a>
+      <div class="nav-wrap">
+        <nav class="site-nav" data-site-nav aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="research.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="cv.html">CV</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode">☾</button>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="interior-page home-page">
+  <main id="main">
     <section class="hero">
-      <p class="eyebrow">ACADEMIC WEBSITE</p>
-      <h1>Javad Pakzad</h1>
-      <p class="hero-subtitle">M.Sc. Student in Applied Mathematics · Numerical Analysis</p>
-      <p class="lead">
-        I am interested in numerical analysis and scientific computing, especially
-        reliable numerical methods for ordinary and partial differential equations.
-        I am also interested in combining mathematical analysis with machine learning.
-      </p>
-      <div class="hero-links">
-        <a class="text-link" href="interests.html">Explore my interests <span aria-hidden="true">→</span></a>
-        <a class="text-link" href="https://github.com/Javad-Pakzad" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Applied Mathematics · Numerical Analysis</span>
+          <h1>Javad Pakzad</h1>
+          <p class="hero-role">M.Sc. Student in Applied Mathematics<br>Focus: Numerical Analysis</p>
+          <p class="hero-copy">I am interested in the analysis and development of reliable numerical methods for ordinary and partial differential equations. My academic interests include numerical stability, convergence and error analysis, scientific computing, and the thoughtful use of machine learning in computational mathematics.</p>
+          <div class="hero-actions">
+            <a class="button" href="research.html">Explore research <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="cv.html">View academic CV</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Research overview">
+          <span class="panel-label">Academic profile</span>
+          <div class="panel-title">Research interests</div>
+          <div class="panel-row"><span class="panel-number">01</span><div><strong>Numerical Differential Equations</strong><span>ODEs, PDEs, stability and error analysis</span></div></div>
+          <div class="panel-row"><span class="panel-number">02</span><div><strong>Numerical Discretization</strong><span>Finite differences, meshless methods and solvers</span></div></div>
+          <div class="panel-row"><span class="panel-number">03</span><div><strong>Scientific Machine Learning</strong><span>Data-driven tools with mathematical structure</span></div></div>
+        </aside>
       </div>
     </section>
 
-    <section class="home-section">
-      <h2 class="subheading">RESEARCH FOCUS</h2>
-      <div class="focus-grid">
-        <article class="focus-card">
-          <span class="card-number">01</span>
-          <h3>Numerical Differential Equations</h3>
-          <p>Numerical methods for ODEs and PDEs, including stability, convergence, and error analysis.</p>
-        </article>
-        <article class="focus-card">
-          <span class="card-number">02</span>
-          <h3>Scientific Computing</h3>
-          <p>Numerical linear algebra, discretization techniques, and computational methods for mathematical models.</p>
-        </article>
-        <article class="focus-card">
-          <span class="card-number">03</span>
-          <h3>Scientific Machine Learning</h3>
-          <p>Exploring how data-driven tools can support reliable numerical solvers while retaining mathematical structure.</p>
-        </article>
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Research profile</span>
+          <h2>Mathematics, computation, and analysis</h2>
+          <p>I am particularly interested in methods whose computational performance is supported by a clear mathematical understanding of consistency, stability, convergence, and error.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card"><span class="card-index">01 / THEORY</span><h3>Numerical Analysis</h3><p>Stability, convergence, error estimates, and the mathematical foundations of numerical algorithms.</p><a class="text-link" href="research.html">Research interests <span aria-hidden="true">→</span></a></article>
+          <article class="card"><span class="card-index">02 / METHODS</span><h3>Numerical PDEs</h3><p>Discretization techniques for differential equations, including finite-difference and meshless approaches.</p><a class="text-link" href="research.html">Explore methods <span aria-hidden="true">→</span></a></article>
+          <article class="card"><span class="card-index">03 / COMPUTING</span><h3>Scientific Computing</h3><p>Computational mathematics, numerical linear algebra, symbolic computation, and scientific machine learning.</p><a class="text-link" href="projects.html">View project themes <span aria-hidden="true">→</span></a></article>
+        </div>
       </div>
     </section>
 
-    <section class="home-section profile-note">
-      <h2 class="subheading">ABOUT THIS WEBSITE</h2>
-      <p>This website is a place to present my academic interests, technical skills, research activities, and future projects. More sections can be added as this work develops.</p>
+    <section class="section">
+      <div class="container">
+        <div class="feature-band">
+          <div><span class="eyebrow">Current research direction</span><h3>High-order methods for differential equations</h3><p>Exploring how symbolic computation and learning-based components may contribute to high-order discretization schemes for stiff differential equations, with rigorous numerical analysis as a central goal.</p></div>
+          <a class="button secondary" href="research.html">Read more <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Beyond research</span><h2>Teaching and academic work</h2><p>Alongside my interests in applied mathematics, I teach mathematics at the secondary-school level and value clear explanations, active learning, and problem-solving.</p></div>
+        <div class="hero-actions"><a class="button secondary" href="teaching.html">Teaching profile</a><a class="button secondary" href="contact.html">Get in touch</a><a class="button secondary" href="https://github.com/Javad-Pakzad" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>© 2026 Javad Pakzad</span>
-    <a href="https://github.com/Javad-Pakzad" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </footer>
-
-  <script src="theme.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-current-year>2026</span> Javad Pakzad. Academic website.</span><div class="footer-links"><a href="research.html">Research</a><a href="cv.html">CV</a><a href="contact.html">Contact</a><a href="https://github.com/Javad-Pakzad" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></footer>
 </body>
 </html>
