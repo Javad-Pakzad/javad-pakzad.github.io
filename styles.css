@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+  color-scheme: light;
+  --paper: #f6f5f0;
+  --surface: #fbfaf6;
+  --ink: #222820;
+  --muted: #687168;
+  --line: #d6d9ce;
+  --green: #355d4c;
+  --green-soft: #e8eee7;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171d19;
+  --surface: #202923;
+  --ink: #edf0e9;
+  --muted: #aab4aa;
+  --line: #39453d;
+  --green: #a8c99a;
+  --green-soft: #29382e;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+a { color: inherit; }
+.site-header {
+  width: min(1120px, calc(100% - 64px));
+  min-height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.site-name {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+nav { display: flex; align-items: center; gap: 24px; }
+nav a {
+  padding: 7px 0;
+  border-bottom: 1px solid transparent;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+nav a:hover, nav a[aria-current="page"] {
+  border-color: var(--green);
+  color: var(--green);
+}
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 17px;
+}
+.theme-toggle:hover { border-color: var(--green); }
+.interior-page {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 58px 0 76px;
+}
+.page-heading { max-width: 760px; margin-bottom: 50px; }
+.eyebrow, .subheading {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.eyebrow { margin: 0 0 13px; }
+h1 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(38px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.page-summary, .lead { max-width: 720px; margin: 0; color: var(--muted); font-size: 17px; }
+.interests-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 68px; }
+.subheading { margin: 0 0 22px; }
+.interest-list { margin: 0; padding: 0; list-style: none; }
+.interest-list li { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+.skills-list { margin: 0; }
+.skills-list div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.skills-list dt { margin: 0 0 5px; color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .7px; text-transform: uppercase; }
+.skills-list dd { margin: 0; font-size: 16px; }
+.small-note { margin-top: 18px; color: var(--muted); font-size: 12px; }
+.hero { max-width: 800px; padding: 48px 0 70px; }
+.hero-subtitle { margin: 0 0 24px; color: var(--green); font-size: 15px; font-weight: 600; }
+.lead { font-size: 18px; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 28px; }
+.text-link { color: var(--green); font-size: 14px; font-weight: 600; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
+.home-section { margin: 12px 0 58px; }
+.focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.focus-card { min-height: 210px; padding: 22px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+.card-number { color: var(--green); font-family: var(--mono); font-size: 11px; }
+.focus-card h3 { margin: 12px 0 9px; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.3; }
+.focus-card p, .profile-note p { margin: 0; color: var(--muted); font-size: 14px; }
+.profile-note { max-width: 700px; }
+.site-footer {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 22px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--green); }
+
+@media (max-width: 760px) {
+  .site-header { width: min(100% - 36px, 1120px); align-items: flex-start; flex-direction: column; padding: 18px 0; }
+  nav { width: 100%; flex-wrap: wrap; gap: 10px 18px; }
+  .interior-page, .site-footer { width: min(100% - 36px, 1120px); }
+  .interior-page { padding-top: 42px; }
+  .interests-layout { grid-template-columns: 1fr; gap: 48px; }
+  .focus-grid { grid-template-columns: 1fr; }
+  .hero { padding: 35px 0 50px; }
+}
